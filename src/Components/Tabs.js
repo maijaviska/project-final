@@ -42,7 +42,7 @@ function Tabs() {
 
                             <div className="d-flex align-items-center">
                                 <div className="flex-shrink-0">
-                                    <img src="https://images.pexels.com/photos/11170412/pexels-photo-11170412.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="figure-img img-fluid rounded" alt="..." />
+                                    <img src="https://images.pexels.com/photos/11170412/pexels-photo-11170412.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="figure-img img-fluid rounded p-3" alt="..." />
                                 </div>
                                 <div className="flex-grow-1 ms-3">
                                     <h2>The Purrfect Bean Cafe</h2>
@@ -56,7 +56,7 @@ function Tabs() {
                         <div className="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-summary-tab">
                             <div className="d-flex align-items-center">
                                 <div className="flex-shrink-0">
-                                    <img src="https://images.pexels.com/photos/9518884/pexels-photo-9518884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="figure-img img-fluid rounded" alt="..." />
+                                    <img src="https://images.pexels.com/photos/9518884/pexels-photo-9518884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="figure-img img-fluid rounded p-3" alt="..." />
                                 </div>
                                 <div className="flex-grow-1 ms-3">
                                     <h2>The Cat Lounge</h2>
