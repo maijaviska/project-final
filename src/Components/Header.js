@@ -6,7 +6,7 @@ function Header() {
             <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
                 <div className="container">
                     <Link className="nav-link" to={'/'}>
-                        <img src="/Images/purrfect_bean4.png" className="img-fluid" style={{ width: '15rem' }} alt="tuna_logo" />
+                        <img src="/Images/purrfect_bean4.png" className="img-fluid" style={{ width: '15rem' }} alt="purr_bean" />
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                         <span className="navbar-toggler-icon"></span>

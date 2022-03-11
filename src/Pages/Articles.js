@@ -1,15 +1,31 @@
-function Articles() {
-    return (
-        <div>
-            <div className="d-flex align-items-center">
-                <div className="flex-shrink-0">
-                    <img src="https://images.pexels.com/photos/9928234/pexels-photo-9928234.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="figure-img img-fluid rounded" alt="..." />
-                </div>
-                <div className="flex-grow-1 ms-3">
-                    This is some content from a media component. You can replace this with any content and adjust it as needed.
-                </div>
-            </div>
+import { Link } from "react-router-dom"
+import getArticles from "../API/getArticles"
 
+function Articles() {
+    const articles = getArticles()
+    const articlesList = articles.map((article, index) => {
+        return (
+            <div key={index} className="row p-2">
+                <div className="col-3">
+                    <img src={article.image1} className="card-img-top" alt="..." />
+                </div>
+                <div className="col-9">
+                        <h5>
+                            <Link to={`/articles/${index}`}>
+                                {article.title}
+                            </Link>
+                        </h5>
+                        <p>{article.describtione}</p>
+                    </div>
+            </div>
+        )
+    })
+
+    return (
+        <div className="container">
+            <div className="row">
+                {articlesList}
+            </div>
         </div>
     )
 }
