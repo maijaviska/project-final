@@ -6,9 +6,13 @@ import { getChats } from "../API/chats"
 function Chat() {
     const [chats, setChats] = useState([])
 
-    useEffect(() => {
+    const loadChats = () => {
         const chatsFromBackend = getChats()
         setChats(chatsFromBackend)
+    }
+
+    useEffect(() => {
+        loadChats()
     }, [])
 
 
@@ -48,7 +52,7 @@ function Chat() {
 
                             <div className="card-footer text-muted justify-content-start align-items-center p-3">
                                 <ul className="mb-3">
-                                    <CreateNewChat />
+                                    <CreateNewChat loadChats={loadChats}/>
                                 </ul> 
                             </div>
                         </div>

@@ -17,3 +17,10 @@ export function getChats() {
         }
     ]
 }
+
+export function createUsername(username) {
+    
+}
+export function createChat(chatName) {
+
+}

@@ -1,10 +1,24 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react"
+import { createChat, createUsername } from "../API/chats"
 
-function CreateNewChat() {
-    const [newUsername, setUsername] = useState('')
+function CreateNewChat(props) {
+    const { loadChats } = props
+    const [newUsername, setNewUsername] = useState('')
     const [newChatText, setNewChatText] = useState('')
+    const [chatCreating, setChatCreating] = useState(false)
+
+    
+    const createChatAction = () => {
+        setChatCreating(true)
+        createUsername(newUsername)
+        createChat(newChatText)
+        setChatCreating(false)
+        loadChats()
+        setNewUsername('') 
+        setNewChatText('')
+    }
 
     return (
         <div>
@@ -15,7 +29,7 @@ function CreateNewChat() {
                     className="form-control"
                     placeholder="Username"
                     value={newUsername}
-                    onChange={(event) => setUsername(event.target.value)}
+                    onChange={(event) => setNewUsername(event.target.value)}
                     id="new-user-name"
                 />
             </div>
@@ -29,7 +43,13 @@ function CreateNewChat() {
                 />
                 <label className="form-label" htmlFor="new-chat-text">Message</label>
             </div>
-            <button className="btn btn-warning btn-lg btn-rounded float-end"><FontAwesomeIcon icon={faPaperPlane} /></button>
+            <button 
+                className="btn btn-warning btn-lg btn-rounded float-end"
+                disabled={chatCreating}
+                onClick={createChatAction}
+            >
+                <FontAwesomeIcon icon={faPaperPlane} />
+            </button>
         </div>
     )
 }
