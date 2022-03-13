@@ -91,7 +91,7 @@ function getArticles() {
             image4: 'https://shop.meowwolf.com/wp-content/uploads/sites/3/2019/10/fbc15c95-obsidiopolisimg_5835-edited-scaled.jpg',
         },
         {
-            title: 'Cat-Us Tote Bag',
+            title: 'Cat-Us Cofee',
             describtione: 'Our coffee is fresh, local, and absolutely delicious. Enjoy our coffe in absolutely amazing mug or in our Cat Lounge. We have kitties! Big ones, small ones, fluffy ones, grumpy ones, silly ones, majestic ones, tall ones, short ones, chunky ones, dainty ones, curious ones, timid ones, grey ones, orange ones, cuddly ones, scratchy ones, old ones, young ones, brothers, sisters, mommies and kittens.',
             price: 12,
             image1: 'https://images.pexels.com/photos/350478/pexels-photo-350478.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',

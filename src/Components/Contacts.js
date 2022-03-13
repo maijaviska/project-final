@@ -1,3 +1,5 @@
+
+
 function Contacts() {
     return (
         <div className="container p-5">
@@ -8,7 +10,8 @@ function Contacts() {
             </div>
             <div className="row">
                 <div className="col-4">
-                    <span>Map</span>
+                    
+                    <div id="map"></div>
                 </div>
                 <div className="col-8">
                     <h4>Address</h4>
