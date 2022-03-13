@@ -77,7 +77,7 @@ function getArticles() {
             describtione: '“It`s hard to blend in when clearly you are and have always been royalty.” - Fantastrophe',
             price: 35,
             image1: 'https://shop.meowwolf.com/wp-content/uploads/sites/3/2019/11/1327a970-obsidiopolisimg_5281-edited-scaled.jpg',
-            image2: 'https://shop.meowwolf.com/wp-content/uploads/sites/3/2019/11/af319070-obsidiopolis_cat_us_crop_3_meow_wolf.jpg-scaled.jp',
+            image2: 'https://shop.meowwolf.com/wp-content/uploads/sites/3/2019/11/af319070-obsidiopolis_cat_us_crop_3_meow_wolf.jpg-scaled.jpg',
             image3: 'https://shop.meowwolf.com/wp-content/uploads/sites/3/2019/11/a18f38ed-obsidiopolisimg_5286-edited-scaled.jpg',
             image4: 'https://shop.meowwolf.com/wp-content/uploads/sites/3/2019/11/e83ecff4-obsidiopolisimg_5231-edited.jpg',
         },

@@ -11,7 +11,7 @@ function Topics() {
                     <img src={topic.image} className="card-img-top" alt="..."/>
                     <div className="card-body">
                         <h5 className="card-title">
-                            <Link to={`/articles`}>
+                            <Link to={`/articles`} style={{color: "#1C0A00"}}>
                                 {topic.title}
                             </Link>
                         </h5>
