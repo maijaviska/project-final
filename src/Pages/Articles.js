@@ -11,7 +11,7 @@ function Articles() {
                 </div>
                 <div className="col-9">
                         <h5>
-                            <Link to={`/articles/${index}`}>
+                            <Link to={`/articles/${index}`} style={{color: "#1C0A00"}}>
                                 {article.title}
                             </Link>
                         </h5>
