@@ -16,9 +16,7 @@ function Topics() {
                             </Link>
                         </h5>
                         <p className="card-text">{topic.describtione}</p>
-
                     </div>
-
                 </div>
             </div>
         )
@@ -28,7 +26,6 @@ function Topics() {
         <div className="container">
             <div className="row mb-3 mt-3">
                 {topicsList}
-
             </div>
         </div>
     )
