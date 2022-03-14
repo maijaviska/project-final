@@ -6,7 +6,7 @@ function OneChat(props) {
                 <p className="small mb-1">{onechat.title}</p>
             </div>
             <div>
-                <p className="small p-2 ms-3 mb-3 rounded-3" style={{ backgroundColor: "#f5f6f7" }}>{onechat.chat}</p>
+                <p className="small p-2 ms-3 mb-3 rounded-3" style={{ backgroundColor: "#f5f6f7" }}>{onechat.message}</p>
             </div>
         </div>
     )

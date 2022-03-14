@@ -13,8 +13,8 @@ function CreateNewChat(props) {
     const createChatAction = async () => {
         setChatCreating(true)
         await createMessage(newUsername, newChatText)
-        await loadChats()
         setChatCreating(false)
+        await loadChats()
         setNewUsername('') 
         setNewChatText('')
     }
