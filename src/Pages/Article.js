@@ -12,9 +12,8 @@ function Article() {
 
     return (
         <div>
-
             <h5 className="p-1">
-                <Link to="/articles" className="btn btn-outline-dark"><FontAwesomeIcon icon={faArrowLeft}/> Back</Link>
+                <Link to="/articles" className="btn btn-outline-dark"><FontAwesomeIcon icon={faArrowLeft} /> Back</Link>
             </h5>
             <div className="row">
                 <div className="col-12">
@@ -35,7 +34,7 @@ function Article() {
 
                         <div className="col-6 text-start">
                             <p className="one-product-price">{article.price} EUR</p>
-                            <button className="btn btn-warning"><FontAwesomeIcon icon={faBasketShopping}/> Add to cart</button>
+                            <button className="btn btn-warning"><FontAwesomeIcon icon={faBasketShopping} /> Add to cart</button>
                         </div>
                     </div>
                 </div>

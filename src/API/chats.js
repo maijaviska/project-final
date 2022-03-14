@@ -16,9 +16,3 @@ export async function createMessage(usernameName, chatMessage) {
     }
     await axios.post(baseUrl, data)
 }
-// export async function createChat(chatName) {
-//     const data = {
-//         chat: chatName
-//     }
-//     await axios.post(baseUrl, data)
-// }
