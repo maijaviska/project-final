@@ -1,26 +1,24 @@
-export function getChats() {
-    return [
-        {
-            id: 10,
-            username: 'Anna',
-            chat: 'Hello!', 
-        },
-        {
-            id: 11,
-            username: 'Bob',
-            chat: 'Hi!', 
-        },
-        {
-            id: 12,
-            username: 'Zane',
-            chat: 'Hello!', 
-        }
-    ]
-}
+import axios from "axios"
 
-export function createUsername(username) {
+const baseUrl = 'http://localhost:3000/tasks'
+
+export async function getChats() {
+    
+    const response = await axios.get(baseUrl)
+    return response.data
     
 }
-export function createChat(chatName) {
 
+export async function createMessage(usernameName, chatMessage) {
+    const data = {
+        title: usernameName,
+        message: chatMessage
+    }
+    await axios.post(baseUrl, data)
 }
+// export async function createChat(chatName) {
+//     const data = {
+//         chat: chatName
+//     }
+//     await axios.post(baseUrl, data)
+// }

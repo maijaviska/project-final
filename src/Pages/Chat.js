@@ -6,8 +6,8 @@ import { getChats } from "../API/chats"
 function Chat() {
     const [chats, setChats] = useState([])
 
-    const loadChats = () => {
-        const chatsFromBackend = getChats()
+    const loadChats = async () => {
+        const chatsFromBackend = await getChats()
         setChats(chatsFromBackend)
     }
 

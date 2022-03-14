@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react"
-import { createChat, createUsername } from "../API/chats"
+import {  createMessage } from "../API/chats"
 
 function CreateNewChat(props) {
     const { loadChats } = props
@@ -10,12 +10,11 @@ function CreateNewChat(props) {
     const [chatCreating, setChatCreating] = useState(false)
 
     
-    const createChatAction = () => {
+    const createChatAction = async () => {
         setChatCreating(true)
-        createUsername(newUsername)
-        createChat(newChatText)
+        await createMessage(newUsername, newChatText)
+        await loadChats()
         setChatCreating(false)
-        loadChats()
         setNewUsername('') 
         setNewChatText('')
     }
