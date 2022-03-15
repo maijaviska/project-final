@@ -42,7 +42,7 @@ function Articles() {
                 </div>
                 <div className="col-9">
                     <h5>
-                        <Link to={`/articles/${index}`} style={{ color: "#1C0A00" }}>
+                        <Link to={`/articles/${index + startList}`} style={{ color: "#1C0A00" }}>
                             {article.title}
                         </Link>
                     </h5>
