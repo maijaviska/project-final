@@ -22,10 +22,10 @@ function Chat() {
                     <div className="col-md-8 col-lg-6 col-xl-4">
                         <div className="card">
                             <div className="card-header d-flex justify-content-between align-items-center p-3"
-                                style={{ borderTop: "4px solid #ffa900;" }}>
+                                style={{ borderTop: "4px solid #E5890A" }}>
                                 <h5 className="mb-0">Chat messages</h5>
                             </div>
-                            <div className="card-body" style={{ position: "relative", height: "400px" }}>
+                            <div className="card-body" style={{ position: "relative", minHeight: "300px" }}>
                                 <Chatlist chats={chats}/>
                             </div>
 

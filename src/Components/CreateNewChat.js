@@ -43,7 +43,8 @@ function CreateNewChat(props) {
                 <label className="form-label" htmlFor="new-chat-text">Message</label>
             </div>
             <button 
-                className="btn btn-warning btn-lg btn-rounded float-end"
+                className="btn btn-lg btn-rounded float-end"
+                style={{backgroundColor:"#E5890A"}}
                 disabled={chatCreating}
                 onClick={createChatAction}
             >
