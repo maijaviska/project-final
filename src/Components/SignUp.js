@@ -1,6 +1,7 @@
 import { Form, Formik } from "formik"
 import RegisterTextField from "./RegisterTextField"
 import * as Yup from 'yup'
+import { CountryDropdown } from "react-country-region-selector"
 
 function SignUp() {
     const validate = Yup.object({
@@ -23,6 +24,7 @@ function SignUp() {
         checked: Yup.bool()
             .oneOf([true], 'Accept Terms & Conditions is required')
     })
+    
     return (
         <Formik
             initialValues={{
@@ -37,38 +39,28 @@ function SignUp() {
             }}
             validationSchema={validate}
         >
-            {formik => (
-                <div>
-                    <h2 className="text-uppercase text-center mb-5">Register</h2>
-                    <Form>
-                        <RegisterTextField label="Username" name="username" type="text" />
-                        <RegisterTextField label="Password" name="password" type="password" />
-                        <RegisterTextField label="Confirm password" name="confirmPasword" type="password" />
-                        <RegisterTextField label="First Name" name="firstName" type="text" />
-                        <RegisterTextField label="Last Name" name="lastName" type="text" />
-                        <RegisterTextField label="Your Email" name="email" type="email" />
-                        <RegisterTextField className="form-select form-select-md" label="Country" name="country" type="text" />
-                        {/* <div className="form-outline mb-4">
-                            <select type="text" id="form3Example1cg" className="form-select form-select-md">
-                                <option select>Select Country</option>
-                                <option value="1">Latvia</option>
-                                <option value="2">Lithuania</option>
-                                <option value="3">Estonia</option>
-                            </select>
-                            <label className="form-label" htmlFor="form3Example1cg">Country</label>
-                        </div> */}
-
-                        <div className="form-check d-flex justify-content-center mb-5">
-                            <RegisterTextField className="form-check-input me-2" type="checkbox" name="checked" />
-                            <label>
-                                I agree all statements in <a href="#!" className="text-body"><u>Terms &#38; Conditions</u></a>
-                            </label>
-                        </div>
-                        <div className="d-flex justify-content-center">
-                            <button className="btn btn-warning btn-block btn-lg gradient-custom-4 text-body" type="submit">Register</button>
-                        </div>
-                    </Form>
-                </div>
+            {({ values, handleChange, handleBlur }) => (
+            <div>
+                <h2 className="text-uppercase text-center mb-5">Register</h2>
+                <Form>
+                    <RegisterTextField label="Username" name="username" type="text" />
+                    <RegisterTextField label="Password" name="password" type="password" />
+                    <RegisterTextField label="Confirm password" name="confirmPasword" type="password" />
+                    <RegisterTextField label="First Name" name="firstName" type="text" />
+                    <RegisterTextField label="Last Name" name="lastName" type="text" />
+                    <RegisterTextField label="Your Email" name="email" type="email" />
+                    <CountryDropdown className="form-select form-select-md" label="Country" name="country" value={values.country} onChange={(_, e) => handleChange(e)} onBlur={handleBlur} />
+                    <div className="form-check d-flex justify-content-center mb-5 p-4">
+                        <RegisterTextField className="form-check-input me-2" type="checkbox" name="checked" />
+                        <label>
+                            I agree all statements in <a href="#!" className="text-body"><u>Terms &#38; Conditions</u></a>
+                        </label>
+                    </div>
+                    <div className="d-flex justify-content-center">
+                        <button className="btn btn-warning btn-block btn-lg gradient-custom-4 text-body" type="submit">Register</button>
+                    </div>
+                </Form>
+            </div>
             )}
         </Formik>
     )
