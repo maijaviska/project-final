@@ -47,7 +47,17 @@ function SignUp() {
                         <RegisterTextField label="First Name" name="firstName" type="text" />
                         <RegisterTextField label="Last Name" name="lastName" type="text" />
                         <RegisterTextField label="Your Email" name="email" type="email" />
-                        <RegisterTextField label="Country" name="country" type="text" />
+                        <RegisterTextField className="form-select form-select-md" label="Country" name="country" type="text" />
+                        {/* <div className="form-outline mb-4">
+                            <select type="text" id="form3Example1cg" className="form-select form-select-md">
+                                <option select>Select Country</option>
+                                <option value="1">Latvia</option>
+                                <option value="2">Lithuania</option>
+                                <option value="3">Estonia</option>
+                            </select>
+                            <label className="form-label" htmlFor="form3Example1cg">Country</label>
+                        </div> */}
+
                         <div className="form-check d-flex justify-content-center mb-5">
                             <RegisterTextField className="form-check-input me-2" type="checkbox" name="checked" />
                             <label>
